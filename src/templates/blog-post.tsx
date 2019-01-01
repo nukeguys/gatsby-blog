@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
+import Layout from '../layout';
 import SEO from '../components/SEO';
 import { IPageProps } from '../pages/common';
 import { ISite, IMarkdownRemark } from '../type';

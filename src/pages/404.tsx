@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
+import Layout from '../layout';
 import SEO from '../components/SEO';
 import { IPageProps } from './common';
 
