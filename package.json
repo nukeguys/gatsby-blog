@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "nukeguys-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "about development, life, something...",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "nukeguys <nukeguys0@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/nukeguys/gatsby-blog/issues"
   },
   "dependencies": {
     "@types/classnames": "^2.2.6",
@@ -50,7 +50,7 @@
     "tslint-loader": "^3.5.4",
     "tslint-react": "^3.6.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://nukeguys.github.io/",
   "keywords": [
     "gatsby"
   ],
@@ -58,7 +58,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/nukeguys/gatsby-blog.git"
   },
   "scripts": {
     "dev": "gatsby develop",
