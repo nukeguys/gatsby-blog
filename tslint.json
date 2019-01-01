@@ -13,7 +13,8 @@
     "jsx-no-multiline-js": [false],
     "ordered-imports": [false],
     "member-access": [false],
-    "object-literal-sort-keys": [false]
+    "object-literal-sort-keys": [false],
+    "jsx-boolean-value": [false]
   },
   "rulesDirectory": []
 }

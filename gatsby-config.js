@@ -71,5 +71,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
+    `gatsby-plugin-styled-jsx`,
   ],
 };
