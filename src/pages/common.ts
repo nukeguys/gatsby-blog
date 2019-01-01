@@ -1,5 +1,5 @@
 import { Match, History, Location } from '@reach/router';
-import { IMarkdownRemark } from '../type';
+import { IMarkdownRemark } from 'type';
 
 export interface IPageProps extends IGatsbyPrpos, IPageContext {}
 

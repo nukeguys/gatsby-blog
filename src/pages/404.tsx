@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Layout from '../layout';
-import SEO from '../components/SEO';
+import Layout from 'layout';
+import SEO from 'components/SEO';
 import { IPageProps } from './common';
 
 class NotFoundPage extends React.Component<IPageProps> {
