@@ -25,3 +25,8 @@ export interface ISite {
     author: string;
   };
 }
+
+export interface IMenu {
+  name: string;
+  path: string;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import 'style/custom.scss';
+import { IMenu } from 'type';
 
 export interface ILayoutProps {
   title: string;
@@ -9,6 +11,11 @@ export interface ILayoutProps {
   hasFooter: boolean;
 }
 
+const items: IMenu[] = [
+  { name: 'HOME', path: '/' },
+  { name: 'TAG', path: '/' },
+  { name: 'ABOUT', path: '/' },
+];
 class Layout extends React.Component<ILayoutProps> {
   static defaultProps = {
     title: '',
@@ -20,7 +27,7 @@ class Layout extends React.Component<ILayoutProps> {
     const { title, children, hasHeader, hasFooter } = this.props;
     return (
       <>
-        {hasHeader && <Header title={title} />}
+        {hasHeader && <Header title={title} menuItems={items} />}
         {children}
         {hasFooter && <Footer />}
       </>

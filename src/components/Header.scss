@@ -1,0 +1,29 @@
+@import 'style/custom.scss';
+
+#header-navbar {
+  .navbar-brand {
+    letter-spacing: 0.25rem;
+    border-right: 1px solid $grey-lighter;
+  }
+
+  .navbar-menu {
+    .navbar-item {
+      letter-spacing: 0.25rem;
+    }
+    .vertical-divider {
+      display: flex;
+      align-items: center;
+      .divider {
+        border-left: 1px solid $grey-lighter;
+        height: 30%;
+      }
+    }
+    .vertical-divider:last-child {
+      display: none;
+    }
+  }
+}
+
+#header-navbar:not(.is-active) {
+  border-bottom: 1px solid $grey-lighter;
+}
