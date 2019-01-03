@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../layout';
+import Layout from '../layout/index';
 import SEO from '../components/SEO';
 import { IPageProps } from '../pages/common';
 import { ISite, IMarkdownRemark } from '../type';
@@ -15,12 +15,13 @@ interface IProps extends IPageProps {
 
 class BlogPostTemplate extends React.Component<IProps> {
   render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
+    const {
+      data: { markdownRemark: post, site },
+      pageContext: { previous, next },
+    } = this.props;
 
     return (
-      <Layout title={siteTitle}>
+      <Layout siteMetadata={site.siteMetadata}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p

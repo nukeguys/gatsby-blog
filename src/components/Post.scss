@@ -1,0 +1,19 @@
+@import 'style/custom.scss';
+
+#post {
+  padding: 2rem;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  .summary {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}

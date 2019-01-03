@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Layout from 'layout';
+import Layout from 'layout/index';
 import SEO from 'components/SEO';
 import { IPageProps } from './common';
 import { ISite, IAllMarkdownRemark } from 'type';
+import Post from 'components/Post';
+import './index.scss';
 
 interface IProps extends IPageProps {
   data: {
@@ -14,31 +16,21 @@ interface IProps extends IPageProps {
 
 class BlogIndex extends React.Component<IProps> {
   render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
+    const { site, allMarkdownRemark } = this.props.data;
+    const posts = allMarkdownRemark.edges;
 
     return (
-      <Layout title={siteTitle}>
+      <Layout siteMetadata={site.siteMetadata}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
           return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: 10,
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <div className="postItem" key={node.fields.slug}>
+              <Link className="postLink" to={node.fields.slug}>
+                <Post post={node} />
+              </Link>
             </div>
           );
         })}
@@ -54,18 +46,23 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        siteUrl
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
+          html
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            description
+            tags
           }
         }
       }

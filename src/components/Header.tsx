@@ -26,14 +26,18 @@ export default class Header extends React.Component<
     this.setState({ activeMenu: !this.state.activeMenu });
   };
 
+  onClickMenu: React.MouseEventHandler<HTMLAnchorElement> = () => {
+    this.setState({ activeMenu: false });
+  };
+
   render() {
     const { title, menuItems } = this.props;
     const { activeMenu } = this.state;
 
     return (
       <nav
-        id="header-navbar"
-        className={classnames('navbar', {
+        id="header"
+        className={classnames('navbar has-background-white', {
           'is-active': activeMenu,
         })}
         role="navigation"
@@ -42,7 +46,7 @@ export default class Header extends React.Component<
         <div className="navbar-brand">
           <a
             className="navbar-item is-uppercase has-text-weight-bold is-size-7"
-            href="https://bulma.io"
+            href="/"
           >
             {title}
           </a>
@@ -67,14 +71,14 @@ export default class Header extends React.Component<
             'is-active': activeMenu,
           })}
         >
-          <div className="navbar-start">
+          <div className="navbar-end">
             {menuItems.map(menu => (
               <React.Fragment key={menu.name}>
                 <GatsbyLink
                   key={menu.name}
                   className="navbar-item is-size-7"
                   to={menu.path}
-                  onClick={this.onClickBuger}
+                  onClick={this.onClickMenu}
                 >
                   {menu.name}
                 </GatsbyLink>

@@ -1,0 +1,24 @@
+@import 'bulma/sass/utilities/_all.sass';
+
+#footer {
+  letter-spacing: 0.2rem;
+  margin: 3rem 0 2rem 0;
+  // TODO: bulma 다음 버전에서 $footer-padding 개선되면 제거(https://github.com/jgthms/bulma/issues/1878)
+  padding: 0;
+
+  p {
+    @include from($desktop) {
+      text-align: left;
+    }
+    @include until($desktop) {
+      text-align: center;
+    }
+    &:first-child {
+      border-top: solid 1px rgba(160, 160, 160, 0.3);
+      padding-top: 3rem;
+    }
+    &:not(:first-child) {
+      margin-top: 0.5rem;
+    }
+  }
+}

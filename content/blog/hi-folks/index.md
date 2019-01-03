@@ -1,6 +1,8 @@
 ---
 title: New Beginnings
 date: '2015-05-28T22:40:32.169Z'
+description: 'Far far away, behind the word mountains, far from the countries Vokalia'
+tags: ['blog', '가츠비', '2019']
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

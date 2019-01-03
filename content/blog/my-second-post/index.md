@@ -1,6 +1,8 @@
 ---
 title: My Second Post!
 date: '2015-05-06T23:46:37.121Z'
+description: 'Wow! I love blogging so much already.'
+tags: ['blog', '가츠비', '2019']
 ---
 
 Wow! I love blogging so much already.

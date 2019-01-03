@@ -1,6 +1,6 @@
-@import 'style/custom.scss';
+@import 'bulma/sass/utilities/_all.sass';
 
-#header-navbar {
+#header {
   .navbar-brand {
     letter-spacing: 0.25rem;
     border-right: 1px solid $grey-lighter;
@@ -22,8 +22,7 @@
       display: none;
     }
   }
-}
-
-#header-navbar:not(.is-active) {
-  border-bottom: 1px solid $grey-lighter;
+  &:not(.is-active) {
+    border-bottom: 1px solid $grey-lighter;
+  }
 }

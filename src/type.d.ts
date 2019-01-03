@@ -16,14 +16,20 @@ export interface IMarkdownRemark {
   frontmatter: {
     title: string;
     date: string;
+    description: string;
+    tags: string[];
   };
 }
 
 export interface ISite {
-  siteMetadata: {
-    title: string;
-    author: string;
-  };
+  siteMetadata: ISiteMetadata;
+}
+
+export interface ISiteMetadata {
+  title: string;
+  author: string;
+  description: string;
+  siteUrl: string;
 }
 
 export interface IMenu {

@@ -1,18 +1,49 @@
 // https://bulma.io/documentation/customize/variables/
 @charset "utf-8";
-
+@import 'bulma/sass/utilities/initial-variables.sass';
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800');
 
+// initial
 $family-sans-serif: 'Raleway', sans-serif;
-$link-hover: #2ebaae;
-$size-7: 0.7rem;
+$link-hover: hsl(217, 71%, 53%);
 $weight-bold: 800;
+$grey-darker: #3c3b3b;
+$grey-dark: #3c3b3b;
+
+// section
+$section-margin: 3rem;
+$section-padding: 3rem;
 
 // navbar
-$navbar-item-hover-color: $link-hover;
-$navbar-item-color: #3c3b3b;
 $navbar-burger-color: #aaaaaa;
 
+// footer
+$footer-background-color: transparent;
+$footer-padding: 0;
+
+// responsive
+$tablet-enabled: false;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// custom
+// a tag without class
+a {
+  -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+
+  &:not([class]) {
+    color: $grey-dark;
+    border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+  &.icon {
+    color: hsl(0, 0%, 48%);
+  }
+}
 /* Initial variables */
 
 // $black:        hsl(0, 0%, 4%) !default
