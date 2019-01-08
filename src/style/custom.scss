@@ -3,6 +3,13 @@
 @import 'bulma/sass/utilities/initial-variables.sass';
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800');
 
+@import './header';
+@import './footer';
+@import './post';
+@import './layout';
+@import './page_index';
+@import './blog_post';
+
 // initial
 $family-sans-serif: 'Raleway', sans-serif;
 $link-hover: hsl(217, 71%, 53%);

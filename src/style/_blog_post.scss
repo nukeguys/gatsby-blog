@@ -1,0 +1,17 @@
+#blog-post {
+  @include from($desktop) {
+    padding: 2rem 0 0;
+  }
+
+  @include until($desktop) {
+    padding: 1rem;
+  }
+
+  .summary {
+    margin: 1rem 0 0.5rem;
+  }
+
+  article {
+    margin-top: 2rem;
+  }
+}

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-
 import Layout from '../layout/index';
-import SEO from '../components/SEO';
+import SEO from '../components/Seo';
 import { IPageProps } from '../pages/common';
 import { ISite, IMarkdownRemark } from '../type';
 
@@ -21,49 +20,46 @@ class BlogPostTemplate extends React.Component<IProps> {
     } = this.props;
 
     return (
-      <Layout siteMetadata={site.siteMetadata}>
+      <Layout siteMetadata={site.siteMetadata} showIntro={false}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            display: `block`,
-            marginBottom: 10,
-            marginTop: 10,
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: 20,
-          }}
-        />
-
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <section id="blog-post">
+          <div className="has-text-weight-semibold is-size-3 is-size-4-mobile">
+            {post.frontmatter.title}
+          </div>
+          <div className="is-size-7 is-size-7-mobile">
+            {post.frontmatter.date}
+          </div>
+          <div className="summary is-size-6 is-size-6-mobile">
+            {post.frontmatter.description}
+          </div>
+          <div className="tags">
+            {post.frontmatter.tags.map(tag => (
+              <span key={tag} className="tag">
+                #{tag}
+              </span>
+            ))}
+          </div>
+          <article
+            className="content"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+          <nav className="level">
+            <div className="level-left">
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </div>
+            <div className="level-right">
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </div>
+          </nav>
+        </section>
       </Layout>
     );
   }
@@ -85,7 +81,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY/MM/DD HH:mm")
+        tags
+        description
       }
     }
   }

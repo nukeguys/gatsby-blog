@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { IMarkdownRemark } from 'type';
-import { Link } from 'gatsby';
-import './Post.scss';
 
 interface IProps {
   post: IMarkdownRemark;
@@ -20,7 +18,7 @@ class Post extends Component<IProps> {
           {post.frontmatter.date}
         </div>
         <div className="summary is-size-6 is-size-6-mobile">
-          {post.frontmatter.description}}
+          {post.frontmatter.description}
         </div>
         <div className="tags">
           {post.frontmatter.tags.map(tag => (

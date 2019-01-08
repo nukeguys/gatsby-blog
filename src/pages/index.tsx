@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from 'layout/index';
-import SEO from 'components/SEO';
+import SEO from 'components/Seo';
 import { IPageProps } from './common';
 import { ISite, IAllMarkdownRemark } from 'type';
 import Post from 'components/Post';
-import './index.scss';
 
 interface IProps extends IPageProps {
   data: {
@@ -20,7 +19,7 @@ class BlogIndex extends React.Component<IProps> {
     const posts = allMarkdownRemark.edges;
 
     return (
-      <Layout siteMetadata={site.siteMetadata}>
+      <Layout siteMetadata={site.siteMetadata} showIntro={true}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -59,7 +58,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY/MM/DD")
             title
             description
             tags

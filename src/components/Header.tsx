@@ -2,7 +2,6 @@ import React from 'react';
 import GatsbyLink from 'gatsby-link';
 import classnames from 'classnames';
 import { IMenu } from 'type';
-import './Header.scss';
 
 interface IHeaderProps {
   title: string;
