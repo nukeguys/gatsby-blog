@@ -1,14 +1,6 @@
 // https://bulma.io/documentation/customize/variables/
 @charset "utf-8";
-@import 'bulma/sass/utilities/initial-variables.sass';
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800');
-
-@import './header';
-@import './footer';
-@import './post';
-@import './layout';
-@import './page_index';
-@import './blog_post';
 
 // initial
 $family-sans-serif: 'Raleway', sans-serif;
@@ -190,3 +182,9 @@ a {
 // $strong-weight: $weight-bold !default;
 
 @import 'bulma';
+@import './header';
+@import './footer';
+@import './post';
+@import './layout';
+@import './page_index';
+@import './blog_post';
