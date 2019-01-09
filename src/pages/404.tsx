@@ -39,10 +39,13 @@ class NotFoundPage extends React.Component<IProps> {
           <br />
           눈에 익은 벽화다.
           <br />
-          그 자리에서 성큼 거어나오니 낯익은 길이다.
+          그 자리에서 성큼 걸어나오니 낯익은 길이다.
           <br />
           지금 내가 가야 할 길이 보인다.
           <br />
+        </div>
+        <div className="has-text-centered">
+          <a href="/">홈으로 가기</a>
         </div>
       </Layout>
     );
