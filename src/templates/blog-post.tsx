@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../layout/index';
 import SEO from '../components/Seo';
-import { IPageProps } from '../pages/common';
+import { IPageProps } from '../common';
 import { ISite, IMarkdownRemark } from '../type';
 
 interface IProps extends IPageProps {

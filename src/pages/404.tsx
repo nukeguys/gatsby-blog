@@ -2,7 +2,6 @@ import React from 'react';
 
 import Layout from 'layout/index';
 import SEO from 'components/Seo';
-import { IPageProps } from './common';
 import { graphql } from 'gatsby';
 import { ISite } from 'type';
 
