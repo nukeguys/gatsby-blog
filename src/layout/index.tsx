@@ -11,8 +11,8 @@ export interface ILayoutProps {
 }
 
 const items: IMenu[] = [
-  // { name: 'ABOUT', path: '/' },
-  // { name: 'TAG', path: '/' },
+  { name: 'ABOUT', path: '/about' },
+  { name: 'TAG', path: '/tag' },
 ];
 class Layout extends React.Component<ILayoutProps> {
   render() {
@@ -27,7 +27,7 @@ class Layout extends React.Component<ILayoutProps> {
           <Header title={title} menuItems={items} />
           {showIntro && (
             <div id="intro" className="has-text-centered is-hidden-mobile">
-              <b className="is-size-7 is-marginless">{description}</b>
+              <span className="is-size-7 is-marginless">{description}</span>
             </div>
           )}
         </div>
