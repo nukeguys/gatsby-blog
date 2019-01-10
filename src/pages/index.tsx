@@ -21,7 +21,7 @@ class BlogIndex extends React.Component<IProps> {
     return (
       <Layout siteMetadata={site.siteMetadata} showIntro={true}>
         <SEO
-          title="All posts"
+          title="nuKeguyS"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         {posts.map(({ node }) => {
