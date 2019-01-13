@@ -13,13 +13,15 @@ interface IProps extends IPageProps {
   };
 }
 
+const intro = 'A clever person solves a problem. A wise person AVOIDS it.';
+
 class DevIndex extends React.Component<IProps> {
   render() {
     const { site, allMarkdownRemark } = this.props.data;
     const posts = allMarkdownRemark ? allMarkdownRemark.edges : [];
 
     return (
-      <Layout siteMetadata={site.siteMetadata} showIntro={true}>
+      <Layout siteMetadata={site.siteMetadata} showIntro={true} intro={intro}>
         <SEO
           title="nuKeguyS"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}

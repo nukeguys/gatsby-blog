@@ -8,6 +8,7 @@ export interface ILayoutProps {
   siteMetadata: ISiteMetadata;
   children: any;
   showIntro: boolean;
+  intro?: string;
 }
 
 const items: IMenu[] = [
@@ -20,6 +21,7 @@ class Layout extends React.Component<ILayoutProps> {
       siteMetadata: { title, description },
       children,
       showIntro,
+      intro,
     } = this.props;
     return (
       <section className="hero">
@@ -27,7 +29,9 @@ class Layout extends React.Component<ILayoutProps> {
           <Header title={title} menuItems={items} />
           {showIntro && (
             <div id="intro" className="has-text-centered is-hidden-mobile">
-              <span className="is-size-7 is-marginless">{description}</span>
+              <span className="is-size-7 is-marginless">
+                {intro || description}
+              </span>
             </div>
           )}
         </div>

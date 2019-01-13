@@ -13,13 +13,15 @@ interface IProps extends IPageProps {
   };
 }
 
+const intro = 'You only live once, but if you do it right, once is enough.';
+
 class LifeIndex extends React.Component<IProps> {
   render() {
     const { site, allMarkdownRemark } = this.props.data;
     const posts = allMarkdownRemark ? allMarkdownRemark.edges : [];
 
     return (
-      <Layout siteMetadata={site.siteMetadata} showIntro={true}>
+      <Layout siteMetadata={site.siteMetadata} showIntro={true} intro={intro}>
         <SEO
           title="nuKeguyS"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
