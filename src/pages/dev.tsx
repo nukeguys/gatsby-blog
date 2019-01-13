@@ -13,7 +13,7 @@ interface IProps extends IPageProps {
   };
 }
 
-class BlogIndex extends React.Component<IProps> {
+class DevIndex extends React.Component<IProps> {
   render() {
     const { site, allMarkdownRemark } = this.props.data;
     const posts = allMarkdownRemark ? allMarkdownRemark.edges : [];
@@ -30,7 +30,7 @@ class BlogIndex extends React.Component<IProps> {
   }
 }
 
-export default BlogIndex;
+export default DevIndex;
 
 export const pageQuery = graphql`
   query {
@@ -41,7 +41,10 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { eq: "dev" } } }
+    ) {
       edges {
         node {
           excerpt

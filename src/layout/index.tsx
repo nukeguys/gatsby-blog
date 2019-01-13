@@ -11,8 +11,8 @@ export interface ILayoutProps {
 }
 
 const items: IMenu[] = [
-  { name: 'ABOUT', path: '/about' },
-  { name: 'TAG', path: '/tag' },
+  { name: 'DEV', path: '/dev' },
+  { name: 'LIFE', path: '/life' },
 ];
 class Layout extends React.Component<ILayoutProps> {
   render() {
