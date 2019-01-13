@@ -2,6 +2,7 @@
 title: '시작'
 date: '2019-01-09T23:49:39'
 description: 'gatsby로 블로그를 만들고 처음 쓰는 글'
+category: 'life'
 tags: [블로그, gatsby, 시작, 가즈아]
 ---
 
