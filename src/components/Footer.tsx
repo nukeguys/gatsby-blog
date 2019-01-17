@@ -4,17 +4,20 @@ const Footer = () => {
   return (
     <footer id="footer" className="footer has-text-grey is-size-7">
       <p>
-        <a className="icon">
-          <i className="fa fa-twitter fa-lg" />
-        </a>
-        <a className="icon">
+        <a className="icon" href="https://github.com/nukeguys">
           <i className="fa fa-github fa-lg" />
         </a>
-        <a className="icon">
-          <i className="fa fa-rss fa-lg" />
+        <a
+          className="icon"
+          href="https://www.linkedin.com/in/seung-kyu-sung-42695241"
+        >
+          <i className="fa fa-linkedin fa-lg" />
         </a>
-        <a className="icon">
+        <a className="icon" href="mailto:nukeguys0@gmail.com">
           <i className="fa fa-envelope fa-lg" />
+        </a>
+        <a className="icon" href="/rss.xml">
+          <i className="fa fa-rss fa-lg" />
         </a>
       </p>
       <p className="is-uppercase">
