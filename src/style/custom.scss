@@ -25,6 +25,12 @@ $tablet-enabled: false;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
+// code
+$code: $link-hover;
+.content code {
+  border-radius: 1rem;
+}
+
 // custom
 // a tag without class
 a {
@@ -43,6 +49,19 @@ a {
     color: hsl(0, 0%, 48%);
   }
 }
+
+// code highlighting
+.content code {
+  word-break: break-all;
+}
+.gatsby-highlight {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+.gatsby-highlight pre[class*='language-'] {
+  padding: 1rem;
+}
+
 /* Initial variables */
 
 // $black:        hsl(0, 0%, 4%) !default
