@@ -32,7 +32,6 @@ export default class Header extends React.Component<
   render() {
     const { title, menuItems } = this.props;
     const { activeMenu } = this.state;
-
     return (
       <nav
         id="header"
