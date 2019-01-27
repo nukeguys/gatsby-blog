@@ -77,5 +77,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
     `gatsby-plugin-styled-jsx`,
+    `gatsby-plugin-sitemap`,
   ],
 };
