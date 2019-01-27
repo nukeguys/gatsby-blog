@@ -63,6 +63,14 @@ function SEO({
                 name: `twitter:description`,
                 content: metaDescription,
               },
+              {
+                name: `google-site-verification`,
+                content: data.site.siteMetadata.google_site_verification,
+              },
+              {
+                name: `naver-site-verification`,
+                content: data.site.siteMetadata.naver_site_verification,
+              },
             ]
               .concat(
                 keywords.length > 0
@@ -89,6 +97,8 @@ const detailsQuery = graphql`
         title
         description
         author
+        google_site_verification
+        naver_site_verification
       }
     }
   }

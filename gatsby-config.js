@@ -4,6 +4,8 @@ module.exports = {
     author: `nukeguys`,
     description: `about development, life and something.`,
     siteUrl: `https://nukeguys.github.io/`,
+    google_site_verification: `Qa32yaZLkgQI9TZcxVmVnp12wR0LusDyVoimvgBzENI`,
+    naver_site_verification: `1450bea46de74e3e5ae8438654c716209f5e5722`,
     social: {
       twitter: ``,
     },
