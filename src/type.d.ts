@@ -31,6 +31,9 @@ export interface ISiteMetadata {
   author: string;
   description: string;
   siteUrl: string;
+  google_site_verification: string;
+  naver_site_verification: string;
+  google_ad_client: string;
 }
 
 export interface IMenu {
