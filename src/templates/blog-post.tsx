@@ -29,10 +29,11 @@ class BlogPostTemplate extends React.Component<IProps> {
           script={[
             {
               async: true,
-              src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+              src:
+                'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
             },
             {
-              innerHTML: `(adsbygoogle = window.adsbygoogle || []).push(
+              innerHTML: `(adsbygoogle = window.adsbygoogle || []).push({
                 google_ad_client: '${site.siteMetadata.google_ad_client}',
                 enable_page_level_ads: true
            });`,
