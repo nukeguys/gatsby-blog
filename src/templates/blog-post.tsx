@@ -25,21 +25,6 @@ class BlogPostTemplate extends React.Component<IProps> {
     return (
       <Layout siteMetadata={site.siteMetadata} showIntro={false}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <Helmet
-          script={[
-            {
-              async: true,
-              src:
-                'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-            },
-            {
-              innerHTML: `(adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: '${site.siteMetadata.google_ad_client}',
-                enable_page_level_ads: true
-           });`,
-            },
-          ]}
-        />
         <section id="blog-post">
           <div className="has-text-weight-semibold is-size-3 is-size-4-mobile">
             {post.frontmatter.title}
@@ -61,10 +46,10 @@ class BlogPostTemplate extends React.Component<IProps> {
             className="content"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          {/* <div className="adsense">
+          <>
             <script
               async
-              src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
             />
             <AdSense.Google
               client={site.siteMetadata.google_ad_client}
@@ -79,7 +64,7 @@ class BlogPostTemplate extends React.Component<IProps> {
                   '(window.adsbygoogle = window.adsbygoogle || []).push({});',
               }}
             />
-          </div> */}
+          </>
           <nav className="level">
             <div className="level-left">
               {previous && (
