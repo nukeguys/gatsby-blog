@@ -1,10 +1,10 @@
 // https://bulma.io/documentation/customize/variables/
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&subset=korean');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&subset=korean');
 // initial
-$family-sans-serif: 'Raleway', 'Nanum Myeongjo', serif;
+$family-sans-serif: 'Raleway', 'Nanum Gothic', sans-serif;
 $family-code: $family-sans-serif;
 $family-monospace: 'Nanum Gothic Coding', monospace;
 $body-size: 11pt;
