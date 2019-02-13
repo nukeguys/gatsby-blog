@@ -6,7 +6,8 @@ import { IPageProps } from '../common';
 import { ISite, IMarkdownRemark } from '../type';
 // @ts-ignore
 import AdSense from 'react-adsense';
-import Helmet from 'react-helmet';
+import 'prismjs';
+import 'prismjs/components/prism-typescript';
 
 interface IProps extends IPageProps {
   data: {
