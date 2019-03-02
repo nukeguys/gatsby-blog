@@ -6,8 +6,10 @@ import { IPageProps } from '../common';
 import { ISite, IMarkdownRemark } from '../type';
 // @ts-ignore
 import AdSense from 'react-adsense';
-import 'prismjs';
+import { highlightAll } from 'prismjs';
 import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-bash';
+import 'prismjs/themes/prism.css';
 
 interface IProps extends IPageProps {
   data: {
@@ -17,6 +19,10 @@ interface IProps extends IPageProps {
 }
 
 class BlogPostTemplate extends React.Component<IProps> {
+  componentDidMount() {
+    // TODO: 자동으로 처리가 안되서 직접 호출하고 있다. 방법을 찾아보자.
+    highlightAll();
+  }
   render() {
     const {
       data: { markdownRemark: post, site },
