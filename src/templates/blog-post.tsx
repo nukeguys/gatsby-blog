@@ -4,8 +4,6 @@ import Layout from '../layout/index';
 import SEO from '../components/Seo';
 import { IPageProps } from '../common';
 import { ISite, IMarkdownRemark } from '../type';
-// @ts-ignore
-import AdSense from 'react-adsense';
 import { highlightAll } from 'prismjs';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-bash';
@@ -53,25 +51,6 @@ class BlogPostTemplate extends React.Component<IProps> {
             className="content"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <>
-            <script
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            />
-            <AdSense.Google
-              client={site.siteMetadata.google_ad_client}
-              slot="5458722341"
-              style={{ display: 'block' }}
-              format="auto"
-              responsive="true"
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html:
-                  '(window.adsbygoogle = window.adsbygoogle || []).push({});',
-              }}
-            />
-          </>
           <nav className="level">
             <div className="level-left">
               {previous && (
