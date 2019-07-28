@@ -57,7 +57,7 @@ a {
 
 // code highlighting
 .content code {
-  word-break: break-all;
+  word-break: break-word;
 }
 .gatsby-highlight {
   margin-top: -1rem;
@@ -66,6 +66,8 @@ a {
 .gatsby-highlight pre[class*='language-'] {
   padding: 1rem;
   font-family: $family-monospace;
+  max-width: calc(100vw - 2rem);
+  font-size: 0.875em;
 }
 
 /* Initial variables */
