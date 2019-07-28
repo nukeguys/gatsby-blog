@@ -68,6 +68,9 @@ a {
   font-family: $family-monospace;
   max-width: calc(100vw - 2rem);
   font-size: 0.875em;
+  .token.number {
+    all: unset;
+  }
 }
 
 /* Initial variables */
