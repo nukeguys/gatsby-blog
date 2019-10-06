@@ -79,5 +79,11 @@ module.exports = {
     `gatsby-plugin-tslint`,
     `gatsby-plugin-styled-jsx`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-embedder`],
+      },
+    },
   ],
 };
