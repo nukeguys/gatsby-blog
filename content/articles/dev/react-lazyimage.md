@@ -1,5 +1,5 @@
 ---
-title: 'react lazyloading 이미지 컴포넌트 구현'
+title: 'react lazyloading 이미지 컴포넌트 구현하기'
 date: '2019-10-06T11:39:02'
 description: 'intersection observer와 CustomEvent 사용기'
 category: 'dev'
@@ -108,7 +108,7 @@ const Image = ({ src }: IProps) => {
 
 최종 코드와 동작은 아래에서 확인하자.
 
-https://codesandbox.io/embed/image2-v7ii7?fontsize=14
+https://codesandbox.io/embed/image2-v7ii7?autoresize=1&fontsize=14&module=%2Fsrc%2FImage.tsx
 
 처음 lazyloading을 구현할 땐 라이브러리도 고려해보고 방법도 많이 찾아봤었다. 그리고 지금은 위의 방법과 비슷하게 직접 구현해서 사용하고 있다. 코드양은 얼마 되지 않지만 결과를 내는데 까지 적지 않은 시간과 노력을 들였고 그만큼 결과적으로 만족스럽다. (뭐든지 처음이 어렵지...) 조금 더 나은 웹을 위해 하나씩 더 알아가보자.
 
