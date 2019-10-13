@@ -13,9 +13,9 @@ interface IProps extends IPageProps {
   };
 }
 
-const intro = "We read to know we're not alone.";
+const intro = 'Climbing is all about freedom.';
 
-class ClimbingIndex extends React.Component<IProps> {
+class DevIndex extends React.Component<IProps> {
   render() {
     const { site, allMarkdownRemark } = this.props.data;
     const posts = allMarkdownRemark ? allMarkdownRemark.edges : [];
@@ -24,7 +24,7 @@ class ClimbingIndex extends React.Component<IProps> {
       <Layout siteMetadata={site.siteMetadata} showIntro={true} intro={intro}>
         <SEO
           title="nuKeguyS"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`blog`, `gatsby`, `climbing`, `bouldering`]}
         />
         <PosterList posts={posts} />
       </Layout>
@@ -32,7 +32,7 @@ class ClimbingIndex extends React.Component<IProps> {
   }
 }
 
-export default ClimbingIndex;
+export default DevIndex;
 
 export const pageQuery = graphql`
   query {
@@ -45,7 +45,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: "book" } } }
+      filter: { frontmatter: { category: { eq: "climbing" } } }
     ) {
       edges {
         node {
