@@ -48,6 +48,7 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-embedder`
         ],
       },
     },
@@ -79,11 +80,5 @@ module.exports = {
     `gatsby-plugin-tslint`,
     `gatsby-plugin-styled-jsx`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [`gatsby-remark-embedder`],
-      },
-    },
   ],
 };
