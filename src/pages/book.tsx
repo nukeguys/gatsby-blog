@@ -15,7 +15,7 @@ interface IProps extends IPageProps {
 
 const intro = "We read to know we're not alone.";
 
-class ClimbingIndex extends React.Component<IProps> {
+class BookIndex extends React.Component<IProps> {
   render() {
     const { site, allMarkdownRemark } = this.props.data;
     const posts = allMarkdownRemark ? allMarkdownRemark.edges : [];
@@ -32,7 +32,7 @@ class ClimbingIndex extends React.Component<IProps> {
   }
 }
 
-export default ClimbingIndex;
+export default BookIndex;
 
 export const pageQuery = graphql`
   query {

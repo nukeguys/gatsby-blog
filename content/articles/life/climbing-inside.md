@@ -2,7 +2,7 @@
 title: '클라이밍 일지 #2'
 date: '2019-10-26T20:35:56'
 description: '홀드의 종류와 기본자세 "삼지점"'
-category: 'climbing'
+category: 'life'
 tags: [climbing, hold, three-point, inside-step]
 ---
 

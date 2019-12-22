@@ -15,7 +15,6 @@ const items: IMenu[] = [
   { name: 'DEV', path: '/dev' },
   { name: 'LIFE', path: '/life' },
   { name: 'BOOK', path: '/book' },
-  { name: 'CLIMBING', path: '/climbing' },
 ];
 class Layout extends React.Component<ILayoutProps> {
   render() {

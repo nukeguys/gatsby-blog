@@ -2,7 +2,7 @@
 title: '클라이밍 일지 #1'
 date: '2019-10-13T12:25:36'
 description: '클라이밍의 시작'
-category: 'climbing'
+category: 'life'
 tags: [climbing, bouldering]
 ---
 
